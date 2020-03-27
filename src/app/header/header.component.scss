@@ -1,0 +1,23 @@
+
+.background-div {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: grey;
+    .auth-btn {
+        display: flex;
+        justify-content: flex-end;
+        button {
+            background-color: #fd4c72;
+            padding: 1.065rem 3.5rem;
+            font-size: 0.75rem;
+            line-height: 1.875;
+            border-radius: 50px;
+        }
+    }
+}
