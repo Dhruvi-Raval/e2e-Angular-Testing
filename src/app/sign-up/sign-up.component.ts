@@ -34,6 +34,7 @@ export class SignUpComponent implements OnInit {
       if (this.registerForm.invalid) {
           return;
       } else {
+          // detail
           // tslint:disable-next-line:no-unused-expression
           this.router.navigate['/home'];
       }
