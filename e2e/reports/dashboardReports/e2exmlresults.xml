@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="1" tests="26" time="64.395">
- <testsuite name="workspace-project App" timestamp="2020-04-10T12:11:59" hostname="localhost" time="7.314" errors="0" tests="3" skipped="0" disabled="0" failures="1">
-  <testcase classname="workspace-project App" name="should display signup button failed case" time="4.48">
+<testsuites disabled="0" errors="0" failures="1" tests="26" time="62.849">
+ <testsuite name="workspace-project App" timestamp="2020-04-10T14:29:32" hostname="localhost" time="9.794" errors="0" tests="3" skipped="0" disabled="0" failures="1">
+  <testcase classname="workspace-project App" name="should display signup button failed case" time="5.779">
    <failure type="toEqual" message="Expected &apos;Sign Up&apos; to equal &apos;Sign In&apos;."><![CDATA[Error: Failed expectation
     at UserContext.<anonymous> (D:\Dhruvi\Bacancy_technology\angular-e2e-demo\e2e\src\app.e2e-spec.ts:15:46)
     at D:\Dhruvi\Bacancy_technology\angular-e2e-demo\node_modules\jasminewd2\index.js:112:25
@@ -14,36 +14,36 @@
     at D:\Dhruvi\Bacancy_technology\angular-e2e-demo\node_modules\selenium-webdriver\lib\promise.js:668:7]]>
    </failure>
   </testcase>
-  <testcase classname="workspace-project App" name="should display signup button passed case" time="1.418" />
-  <testcase classname="workspace-project App" name="should display sign-in button" time="1.408" />
+  <testcase classname="workspace-project App" name="should display signup button passed case" time="1.994" />
+  <testcase classname="workspace-project App" name="should display sign-in button" time="2.007" />
  </testsuite>
- <testsuite name="workspace-project Sign-up" timestamp="2020-04-10T12:12:06" hostname="localhost" time="25.985" errors="0" tests="10" skipped="0" disabled="0" failures="0">
-  <testcase classname="workspace-project Sign-up" name="get sign-up page title" time="2.883" />
-  <testcase classname="workspace-project Sign-up" name="Check validation on click of register" time="0.901" />
-  <testcase classname="workspace-project Sign-up" name="should invalid form" time="1.479" />
-  <testcase classname="workspace-project Sign-up" name="should write firstname" time="4.131" />
-  <testcase classname="workspace-project Sign-up" name="should write lastname" time="1.591" />
-  <testcase classname="workspace-project Sign-up" name="should write email" time="4.203" />
-  <testcase classname="workspace-project Sign-up" name="should write password" time="4.872" />
-  <testcase classname="workspace-project Sign-up" name="should write confirm password" time="4.06" />
-  <testcase classname="workspace-project Sign-up" name="should display register button" time="0.401" />
-  <testcase classname="workspace-project Sign-up" name="Navigate when register form will be valid" time="1.462" />
+ <testsuite name="workspace-project Sign-up" timestamp="2020-04-10T14:29:42" hostname="localhost" time="26.422" errors="0" tests="10" skipped="0" disabled="0" failures="0">
+  <testcase classname="workspace-project Sign-up" name="get sign-up page title" time="2.629" />
+  <testcase classname="workspace-project Sign-up" name="Check validation on click of register" time="1.265" />
+  <testcase classname="workspace-project Sign-up" name="should invalid form" time="1.643" />
+  <testcase classname="workspace-project Sign-up" name="should write firstname" time="4.26" />
+  <testcase classname="workspace-project Sign-up" name="should write lastname" time="1.557" />
+  <testcase classname="workspace-project Sign-up" name="should write email" time="4.005" />
+  <testcase classname="workspace-project Sign-up" name="should write password" time="4.773" />
+  <testcase classname="workspace-project Sign-up" name="should write confirm password" time="3.707" />
+  <testcase classname="workspace-project Sign-up" name="should display register button" time="0.395" />
+  <testcase classname="workspace-project Sign-up" name="Navigate when register form will be valid" time="2.184" />
  </testsuite>
- <testsuite name="workspace-project Login" timestamp="2020-04-10T12:12:32" hostname="localhost" time="8.888" errors="0" tests="5" skipped="0" disabled="0" failures="0">
-  <testcase classname="workspace-project Login" name="get sign-in page title" time="3.712" />
-  <testcase classname="workspace-project Login" name="should write email for login" time="2.382" />
-  <testcase classname="workspace-project Login" name="should write password for login" time="1.754" />
-  <testcase classname="workspace-project Login" name="should be login button" time="0.453" />
-  <testcase classname="workspace-project Login" name="should be click on login" time="0.585" />
+ <testsuite name="workspace-project Login" timestamp="2020-04-10T14:30:08" hostname="localhost" time="7.228" errors="0" tests="5" skipped="0" disabled="0" failures="0">
+  <testcase classname="workspace-project Login" name="get sign-in page title" time="2.916" />
+  <testcase classname="workspace-project Login" name="should write email for login" time="1.658" />
+  <testcase classname="workspace-project Login" name="should write password for login" time="1.597" />
+  <testcase classname="workspace-project Login" name="should be login button" time="0.38" />
+  <testcase classname="workspace-project Login" name="should be click on login" time="0.675" />
  </testsuite>
- <testsuite name="workspace-project Dashboard" timestamp="2020-04-10T12:12:41" hostname="localhost" time="22.208" errors="0" tests="8" skipped="0" disabled="0" failures="0">
-  <testcase classname="workspace-project Dashboard" name="should be click on add employee" time="5.606" />
-  <testcase classname="workspace-project Dashboard" name="should be enter the employee details" time="3.477" />
-  <testcase classname="workspace-project Dashboard" name="should click on add button" time="0.901" />
-  <testcase classname="workspace-project Dashboard" name="should be enter the other employee details" time="3.95" />
-  <testcase classname="workspace-project Dashboard" name="should detect table data" time="0.747" />
-  <testcase classname="workspace-project Dashboard" name="should click on edit" time="0.608" />
-  <testcase classname="workspace-project Dashboard" name="should change the info" time="3.12" />
-  <testcase classname="workspace-project Dashboard" name="should be click on delete" time="3.793" />
+ <testsuite name="workspace-project Dashboard" timestamp="2020-04-10T14:30:16" hostname="localhost" time="19.405" errors="0" tests="8" skipped="0" disabled="0" failures="0">
+  <testcase classname="workspace-project Dashboard" name="should be click on add employee" time="4.229" />
+  <testcase classname="workspace-project Dashboard" name="should be enter the employee details" time="3.082" />
+  <testcase classname="workspace-project Dashboard" name="should click on add button" time="1.011" />
+  <testcase classname="workspace-project Dashboard" name="should be enter the other employee details" time="3.698" />
+  <testcase classname="workspace-project Dashboard" name="should detect table data" time="0.801" />
+  <testcase classname="workspace-project Dashboard" name="should click on edit" time="0.526" />
+  <testcase classname="workspace-project Dashboard" name="should change the info" time="2.499" />
+  <testcase classname="workspace-project Dashboard" name="should be click on delete" time="3.558" />
  </testsuite>
 </testsuites>
