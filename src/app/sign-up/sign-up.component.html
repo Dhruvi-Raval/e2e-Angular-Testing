@@ -1,10 +1,10 @@
 <div class="card register">
     <h5 class="card-header">Registration</h5>
     <div class="card-body">
-        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <form id="registerForm" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-row">
                 <div class="form-group col-5">
-                    <label>First Name</label>
+                    <label id="first">First Name</label>
                     <input id="firstname" type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors || ( f.firstName.invalid && (f.firstName.dirty || f.firstName.touched))}" />
                     <div id="firstname-required" *ngIf="submitted && f.firstName.errors || ( f.firstName.invalid && (f.firstName.dirty || f.firstName.touched))" class="invalid-feedback">First Name is required</div>
                 </div>
@@ -28,7 +28,7 @@
                     <input id="password" type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors || ( f.password.invalid && (f.password.dirty || f.password.touched)) }" />
                     <div *ngIf="submitted && f.password.errors || ( f.password.invalid && (f.password.dirty || f.password.touched))" class="invalid-feedback">
                         <div id="password-required" *ngIf="f.password.errors.required">Password is required</div>
-                        <div id="password-length" *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                        <div id="password-length" *ngIf="registerForm.get('password').hasError('pattern')">Password must be at least 12 length which contains first character must be uppercase, must conatin @ and # and must be only 4 digit conatin</div>
                     </div>
                 </div>
                 <div class="form-group col">

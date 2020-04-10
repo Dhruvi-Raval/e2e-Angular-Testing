@@ -1,0 +1,24 @@
+<div class="text-left  add-btn">
+    <button id="add-employee" class="btn btn-primary mr-1" (click)="isAddModalOpen = true">Add employee</button>
+</div>
+<h2>Employee Details</h2>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Position</th>
+    <th>Experience</th>
+    <th>Comapny</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let data of employeeList" id="employee-list">
+    <td>{{data.name}}</td>
+    <td>{{data.position}}</td>
+    <td>{{data.experience}}</td>
+    <td>{{data.company}}</td>
+    <td style="cursor: pointer;" (click)="editDetail(data)">edit</td>
+    <td style="cursor: pointer;" (click)="deleteEmployee(data.key)">delete</td>
+  </tr>
+</table>
+<app-add-employee *ngIf="isAddModalOpen" [open]="isAddModalOpen" (close)="closeModal($event)"></app-add-employee>
+<app-edit-employee *ngIf="isEditModalOpen" [open]="isEditModalOpen" (close)="closeModal($event)" [editDetails]="editEmployeeDetail"></app-edit-employee>
