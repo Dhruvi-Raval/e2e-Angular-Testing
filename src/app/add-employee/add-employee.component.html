@@ -1,0 +1,45 @@
+<div class="card add-form" [class.open]="open">
+    <h3>Add Employee</h3>
+    <form [formGroup]="addEmployeeForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Name</label>
+            <input id="employee-name" type="text" formControlName="name" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.name.errors || ( f.name.invalid && (f.name.dirty || f.name.touched))}" />
+            <div *ngIf="submitted && f.name.errors || (f.name.invalid && (f.name.dirty || f.name.touched))"
+                class="invalid-feedback">
+                <div id="name-required" *ngIf="f.name.errors.required">name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Position</label>
+            <input id="employee-position" type="text" formControlName="position" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.position.errors || ( f.position.invalid && (f.position.dirty || f.position.touched))}" />
+            <div *ngIf="submitted && f.position.errors || (f.position.invalid && (f.position.dirty || f.position.touched))"
+                class="invalid-feedback">
+                <div id="position-required" *ngIf="f.position.errors.required">position is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Experience</label>
+            <input id="employee-experience" type="number" formControlName="experience" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.experience.errors || ( f.experience.invalid && (f.experience.dirty || f.experience.touched))}" />
+            <div *ngIf="submitted && f.experience.errors || (f.experience.invalid && (f.experience.dirty || f.experience.touched))"
+                class="invalid-feedback">
+                <div id="experience-required" *ngIf="f.experience.errors.required">experience is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Company</label>
+            <input id="employee-company" type="text" formControlName="company" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.company.errors || ( f.company.invalid && (f.company.dirty || f.company.touched))}" />
+            <div *ngIf="submitted && f.company.errors || (f.company.invalid && (f.company.dirty || f.company.touched))"
+                class="invalid-feedback">
+                <div id="company-required" *ngIf="f.company.errors.required">company is required</div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary mr-1" id="addEmployee">Add</button>
+            <button class="btn btn-primary mr-1" id="cancel" (click)="onCancel()">Cancel</button>
+        </div>
+    </form>
+</div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PasswordMatch } from './password-match.validators';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,15 +13,16 @@ export class SignUpComponent implements OnInit {
 
   registerForm: FormGroup;
   submitted = false;
+  validation = /^[A-Z](?=\S+@+#\b[0-9]{4}\b).{11}$/g;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private auth: AuthService) { }
 
   ngOnInit() {
       this.registerForm = this.formBuilder.group({
           firstName: ['', Validators.required],
           lastName: ['', Validators.required],
           email: ['', [Validators.required, Validators.email]],
-          password: ['', [Validators.required, Validators.minLength(6)]],
+          password: ['', [Validators.required, Validators.pattern(this.validation)]],
           confirmPassword: ['', Validators.required]
       }, {
         validator: PasswordMatch('password', 'confirmPassword')
@@ -34,9 +36,8 @@ export class SignUpComponent implements OnInit {
       if (this.registerForm.invalid) {
           return;
       } else {
-          // detail
-          // tslint:disable-next-line:no-unused-expression
-          this.router.navigate['/home'];
+          this.auth.registrationAdd(this.registerForm.value);
+          this.router.navigate(['/home']);
       }
   }
 

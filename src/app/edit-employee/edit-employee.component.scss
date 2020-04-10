@@ -1,0 +1,15 @@
+.edit-form{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding: 10px;
+    top: 13px;
+    left: 30%;
+    width: 400px;
+    height: auto;
+    background-color: ghostwhite;
+    &.open {
+        display: flex;
+    }
+}
